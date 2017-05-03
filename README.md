@@ -16,6 +16,11 @@ getRandomElement([1, 2, 3])
 getRandomNumber(1, 10);
 //=> 4
 ```
+
+```
+getURLSlug('My Favorite Songs');
+/ => 'my-favorit-songs
+```
 # Git commands used in the project and a little explanation
 
 ```
