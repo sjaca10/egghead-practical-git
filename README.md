@@ -128,5 +128,9 @@ When we try to merge and a same line has been edited by more than one author the
 
 the code between `<<<<<<< HEAD` and `=======` is our new code that we modified and the code between `=======` and `>>>>>>> 251398d53a0b4dba7ee0c24b3c64de6c85ae2d1f` is the code from the remote.
 
+
 ```
+$ git add -A
+$ git stash
 ```
+git has returned our working directory to the state of the previous commit and our uncommited changes have been saved temporarily in the .git folder locally
