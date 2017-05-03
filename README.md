@@ -139,3 +139,39 @@ git has returned our working directory to the state of the previous commit and o
 $ git stash apply
 ```
 this brought back the uncommited changes we had saved, if a conclit is generated it must be solved in the same way that the conflicts was saved in `git merge`
+
+```
+$ git log
+```
+open up a terminal pager that shows up the commits information from the last to the first commit, we can use some shortcuts to move through the terminal pager:
+`q` to quit
+`j` or `down arrow` to move down in the log
+`k` or `up arrow` to move up in the log
+`PageUp` or `ctrl + f` to move forward
+`PageDown` or `ctrl + b` to move backward
+`/` to search some word and `n` to move to the next occurrence and `N` to the previous occurrence
+
+```
+$ git log --oneline
+```
+shows the log in a single line, with only the hash and the commit message
+
+```
+$ git log --decorate
+```
+shows the log with all references of the commits
+
+```
+$ git log --graph
+```
+display an ask-er graph of the branch structure of each commit
+
+```
+$ git log -p
+```
+display the commit information and the modifications made in every commit
+
+```
+$ git log --stat
+```
+shows the number of insertions and deletions for each commit change (statistics)
