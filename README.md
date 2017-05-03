@@ -134,3 +134,8 @@ $ git add -A
 $ git stash
 ```
 git has returned our working directory to the state of the previous commit and our uncommited changes have been saved temporarily in the .git folder locally
+
+```
+$ git stash apply
+```
+this brought back the uncommited changes we had saved, if a conclit is generated it must be solved in the same way that the conflicts was saved in `git merge`
