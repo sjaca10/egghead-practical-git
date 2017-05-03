@@ -115,3 +115,18 @@ $ git branch -d url-slugs
 ```
 delete the local `url-slugs` branch
 
+
+When we try to merge and a same line has been edited by more than one author then a conflict is generated. To identify the conflict we could execute `git status` and the file(s) with status `both modified` must be fixed. When we open the file with a conflict, we could find something like:
+
+```
+<<<<<<< HEAD
+    ...code
+=======
+    ...more code
+>>>>>>> 251398d53a0b4dba7ee0c24b3c64de6c85ae2d1f
+```
+
+the code between `<<<<<<< HEAD` and `=======` is our new code that we modified and the code between `=======` and `>>>>>>> 251398d53a0b4dba7ee0c24b3c64de6c85ae2d1f` is the code from the remote.
+
+```
+```
