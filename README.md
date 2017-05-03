@@ -104,3 +104,14 @@ it is a shortcut for the commands `git branch new-feature-2` and `git checkout n
 $ git checkout -
 ```
 like in UNIX based systems the `-` means the last, so with this command we can change to the last branch where we were
+
+```
+$ git merge url-slugs
+```
+combine the current branch and the specified branch together into the current branch
+
+```
+$ git branch -d url-slugs
+```
+delete the local `url-slugs` branch
+
