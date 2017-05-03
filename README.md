@@ -57,3 +57,45 @@ Create a commit with the files and directories in the staging area with the mess
 $ git push
 ```
 Send the commited changes to the remote repository to store and versioning them
+
+```
+$ git pull
+```
+download and apply the changes commited by other developers/contributors of the repository, `git pull` is the short version of the proccess of execute the commands:
+
+```
+$ git fetch
+```
+which grab the lastest changes from the remote repository and store them withou apply them to the local repository
+
+and
+
+```
+$ git merge
+```
+which combine the lastest changes from the remote repository with the local repository
+
+```
+$ git branch new-feature
+```
+create a new branch (`new-feature`) generated from the branch where the command is executed
+
+```
+$ git branch
+```
+list all branches, the current branch is marked by '*'
+
+```
+$ git checkout new-feature
+```
+changes the current branch to the specified branch (`new-feature`)
+
+```
+$ git checkout -b new-feature-2
+```
+it is a shortcut for the commands `git branch new-feature-2` and `git checkout new-feature-2`, this means that create a new branch `new-feature-2` and move to the new branch
+
+```
+$ git checkout -
+```
+like in UNIX based systems the `-` means the last, so with this command we can change to the last branch where we were
