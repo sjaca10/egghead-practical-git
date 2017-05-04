@@ -241,3 +241,33 @@ shows the commits that exists in both references (master and branch branch)
 $ git log file.extension
 ```
 shows the commits related with the file file.extension
+
+```
+$ git diff
+```
+shows the difference between two references, by default last commit versus the current working directory
+
+```
+$ git diff --stat
+```
+shows the statistics of the difference between the default references
+
+```
+$ git diff --cached
+```
+shows the difference between the references: working directory and staging area
+
+```
+$ git diff HEAD
+```
+display the changes between both the working directory and the staged changes compared with our last commit
+
+```
+$ git diff branch
+```
+display the difference in the branch
+
+```
+$ git diff origin/master getRandom.js
+```
+shows the difference for an specific branch and an specific file
