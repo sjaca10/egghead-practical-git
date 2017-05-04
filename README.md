@@ -315,3 +315,45 @@ basic workflow to find through binary search when a bug was introduced, with `bi
 The hooks are custom scripts that execute before or after certain action. To create a custom hook we must create a file with the instructions, commands to execute inside the .git/hooks folter on the repository.
 
 Finally, the hooks are available only locally and if we need that our hooks are available in the remote repository then we need write a script to coyp it with something like npm-scripts or use a prebuilt tool.
+
+
+The globa configuration for git is saved in the home directory of the user in the file .gitconfig
+
+```
+$ git config --global user.name 'Javier Aguila'
+```
+set the user name as Javier Aguila like global config
+
+```
+$ git config --global user.email sjaca10@gmail.com
+```
+set the user email as sjaca10@gmail.com like global config
+
+```
+$ git config --global core.editor vim
+```
+set the default global editor to use with git operations
+
+```
+$ git config --global alias.graph 'log --graph --oneline'
+```
+set the alias graph to create a new command `git graph` that serves like shortcut for the complete command `git log --graph --oneline`
+
+```
+$ git config --list
+```
+display a condensed list of all of the rules that we have in the git config file
+
+
+Some programs or operating systems generate files that souldn't be versioned. To avoid add that files to the repository create a `.gitignore` file and add that files or folders to the file.
+
+```
+$ git rm file --cached
+```
+remove the tracked file
+
+If we need to ignore files in a globally way, then we create a `.gitignore_global` and execute the command:
+```
+$ git config --global core.excludesfile ~/.gitignore_global
+```
+So, the global config take the global gitignore file.
