@@ -271,3 +271,18 @@ display the difference in the branch
 $ git diff origin/master getRandom.js
 ```
 shows the difference for an specific branch and an specific file
+
+```
+$ git blame myfile
+```
+display the commit, author and date which modified every line in the file myfile
+
+```
+$ git tag v1.0.0
+```
+create a tag with the label v1.0.0, create a reference to a commit that can't be changed, usually combined with semantic versioning
+
+```
+$ git tag
+```
+display all the tags existing in the repo
