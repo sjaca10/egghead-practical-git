@@ -286,3 +286,8 @@ create a tag with the label v1.0.0, create a reference to a commit that can't be
 $ git tag
 ```
 display all the tags existing in the repo
+
+```
+$ git push --tags
+```
+send the tags created locally in the repository to the remote repository
