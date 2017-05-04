@@ -175,3 +175,69 @@ display the commit information and the modifications made in every commit
 $ git log --stat
 ```
 shows the number of insertions and deletions for each commit change (statistics)
+
+```
+$ git log -3
+```
+shows the last 3 commits in log format
+
+```
+$ git log --after="yesterday"
+$ git log --after="30 minutes ago"
+$ git log --after="last tuesday"
+$ git log --after="last week"
+$ git log --after="2 weeks ago"
+$ git log --after="3-15-17"
+$ git log --after="3/15/17"
+```
+shows the commits that have happened between now and yesterday, the `after` keyword could be replaced by `since`
+
+```
+$ git log --before="yesterday"
+```
+shows the commits that have happened between yesterday and the init of history, the `before` keyword could be replaced by `until`
+
+```
+$ git log --author="Javier"
+```
+shows all the commits that have the word Javier in the author or email data
+
+```
+$ git log --author="sjaca\|Javier"
+```
+shows all the commits authored by sjaca or Javier
+
+```
+$ git log --grep="regex"
+```
+shows all the commits that have the `regex` regular expression in the commit message
+
+```
+$ git log -S"Math"
+```
+shows all the commits that have the `Math` word modified inside the changed files
+
+```
+$ git log -GMath\|Random
+```
+shows all commits that match with the regular expression `Math\|Random` inside the changed files
+
+```
+$ git log -i --author="javier"
+```
+shows all the commits made by the author `javier` ignoring the capitalization (-i ignore case)
+
+```
+$ git log --no-merges
+```
+shows the commits without the merges commits
+
+```
+$ git log master..branch
+```
+shows the commits that exists in both references (master and branch branch)
+
+```
+$ git log file.extension
+```
+shows the commits related with the file file.extension
