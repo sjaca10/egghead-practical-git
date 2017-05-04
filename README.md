@@ -291,3 +291,27 @@ display all the tags existing in the repo
 $ git push --tags
 ```
 send the tags created locally in the repository to the remote repository
+
+```
+$ git rebase -i origin/master
+```
+interactive rebase with origin/master branch
+
+```
+$ git rebase --abort
+```
+stop the rebase in progress and return the repository to the state before start the rebase
+
+```
+$ git bisect start
+$ > npm start
+$ git bisect good 4da37dd
+$ git bisect bad
+$ git bisect reset
+```
+basic workflow to find through binary search when a bug was introduced, with `bisect start` we start the workflow, then we can test our code and based in the code pass the tests or not we can use `bisect good` and `bisect bad`, finally, when the bug has been founded then we can execute `bisect reset`
+
+
+The hooks are custom scripts that execute before or after certain action. To create a custom hook we must create a file with the instructions, commands to execute inside the .git/hooks folter on the repository.
+
+Finally, the hooks are available only locally and if we need that our hooks are available in the remote repository then we need write a script to coyp it with something like npm-scripts or use a prebuilt tool.
